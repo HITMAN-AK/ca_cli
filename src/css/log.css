@@ -1,0 +1,162 @@
+
+  body {
+    background-color: #121212;
+  }
+  
+  .login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .spinner {
+    margin-left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid transparent;
+    border-top: 3px solid red;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    font-size: 2rem;
+    z-index: 9999;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .login-form-box {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 0.6s ease;
+  }
+  
+  .login-form-header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: bounceIn 1.5s ease-in-out;
+  }
+  
+  .login-input-group {
+    margin-bottom: 20px;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .login-input:focus {
+    border-color: #00aaff;
+  }
+  
+  .login-submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-submit-button:hover {
+    background-color: #0088cc;
+  }
+  
+  .signup-link {
+    text-align: center;
+    color: #aaa;
+  }
+  
+  .signup-link a {
+    color: #00aaff;
+    text-decoration: none;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 992px) and (max-width: 1600px) {
+    .login-form-box {
+      transform: scale(0.9);
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 767px) {
+    .login-form-box {
+      transform: scale(0.8);
+    }
+  }
+  
+  @media (min-width: 600px) and (max-width: 699px) {
+    .login-form-box {
+      transform: scale(0.75);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .login-form-box {
+      transform: scale(0.5);
+    }
+  }
+  
